@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RDBSchema:RDBSchema xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:RDBSchema="RDBSchema.xmi" xmi:id="TRSLIB" name="TRSLIB">
+  <database href="testvoice/dbase/pcscon_192.168.1.9.dbxmi#A92.168.1.9"/>
+  <tables xmi:type="RDBSchema:RDBTable" href="testvoice/dbase/pcscon_192.168.1.9_TRSLIB_QCLSRC.tblxmi#QCLSRC"/>
+  <tables xmi:type="RDBSchema:RDBTable" href="testvoice/dbase/pcscon_192.168.1.9_TRSLIB_QDDSSRC.tblxmi#QDDSSRC"/>
+  <tables xmi:type="RDBSchema:RDBTable" href="testvoice/dbase/pcscon_192.168.1.9_TRSLIB_QRPGLESRC.tblxmi#QRPGLESRC"/>
+  <tables xmi:type="RDBSchema:RDBTable" href="testvoice/dbase/pcscon_192.168.1.9_TRSLIB_TRSADDCAT.tblxmi#TRSADDCAT"/>
+  <tables xmi:type="RDBSchema:RDBTable" href="testvoice/dbase/pcscon_192.168.1.9_TRSLIB_TRSLOGINF.tblxmi#TRSLOGINF"/>
+  <tables xmi:type="RDBSchema:RDBTable" href="testvoice/dbase/pcscon_192.168.1.9_TRSLIB_TRSPFT01.tblxmi#TRSPFT01"/>
+  <tables xmi:type="RDBSchema:RDBTable" href="testvoice/dbase/pcscon_192.168.1.9_TRSLIB_TRSPF001.tblxmi#TRSPF001"/>
+  <tables xmi:type="RDBSchema:RDBTable" href="testvoice/dbase/pcscon_192.168.1.9_TRSLIB_TRSPF002.tblxmi#TRSPF002"/>
+  <tables xmi:type="RDBSchema:RDBTable" href="testvoice/dbase/pcscon_192.168.1.9_TRSLIB_TRSPF004.tblxmi#TRSPF004"/>
+  <tables xmi:type="RDBSchema:RDBTable" href="testvoice/dbase/pcscon_192.168.1.9_TRSLIB_TRSPF005.tblxmi#TRSPF005"/>
+  <tables xmi:type="RDBSchema:RDBTable" href="testvoice/dbase/pcscon_192.168.1.9_TRSLIB_TRSPF006.tblxmi#TRSPF006"/>
+  <tables xmi:type="RDBSchema:RDBTable" href="testvoice/dbase/pcscon_192.168.1.9_TRSLIB_TRSPF010.tblxmi#TRSPF010"/>
+  <tables xmi:type="RDBSchema:RDBTable" href="testvoice/dbase/pcscon_192.168.1.9_TRSLIB_TRSSTDNWK.tblxmi#TRSSTDNWK"/>
+  <tables xmi:type="RDBSchema:RDBTable" href="testvoice/dbase/pcscon_192.168.1.9_TRSLIB_IVRCONFIG.tblxmi#IVRCONFIG"/>
+  <tables xmi:type="RDBSchema:RDBTable" href="testvoice/dbase/pcscon_192.168.1.9_TRSLIB_TRSMSGLOG.tblxmi#TRSMSGLOG"/>
+  <tables xmi:type="RDBSchema:RDBTable" href="testvoice/dbase/pcscon_192.168.1.9_TRSLIB_TRSSTDIN.tblxmi#TRSSTDIN"/>
+  <tables xmi:type="RDBSchema:RDBTable" href="testvoice/dbase/pcscon_192.168.1.9_TRSLIB_TRSSTDOUT.tblxmi#TRSSTDOUT"/>
+</RDBSchema:RDBSchema>

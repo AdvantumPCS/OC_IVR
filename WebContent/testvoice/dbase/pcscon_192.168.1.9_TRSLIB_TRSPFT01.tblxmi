@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RDBSchema:RDBTable xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:RDBSchema="RDBSchema.xmi" xmi:id="TRSPFT01" name="TRSPFT01">
+  <database href="testvoice/dbase/pcscon_192.168.1.9.dbxmi#A92.168.1.9"/>
+  <schema href="testvoice/dbase/pcscon_192.168.1.9_TRSLIB.schxmi#TRSLIB"/>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="RSPGRP" name="RSPGRP" comments="Group">
+    <type xmi:type="RDBSchema:DB2AS400CharacterStringType" xmi:id="DB2AS400CharacterStringType_1234825601664" characterSet="800" length="1">
+      <originatingType xmi:type="RDBSchema:DB2AS400CharacterStringType" href="DB2UDBAS400_V53_Primitives.xmi#DB2AS400CharacterStringType_1"/>
+    </type>
+  </columns>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="RSPMAN" name="RSPMAN" comments="Man Number">
+    <type xmi:type="RDBSchema:SQLNumeric" xmi:id="SQLNumeric_1234825601664" precision="4" scale="0">
+      <originatingType xmi:type="RDBSchema:SQLNumeric" href="DB2UDBAS400_V53_Primitives.xmi#SQLNumeric_1"/>
+    </type>
+  </columns>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="RSPRPD" name="RSPRPD" comments="Recruiting Period">
+    <type xmi:type="RDBSchema:DB2AS400CharacterStringType" xmi:id="DB2AS400CharacterStringType_1234825601665" characterSet="800" length="1">
+      <originatingType xmi:type="RDBSchema:DB2AS400CharacterStringType" href="DB2UDBAS400_V53_Primitives.xmi#DB2AS400CharacterStringType_1"/>
+    </type>
+  </columns>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="RSPDATE" name="RSPDATE">
+    <type xmi:type="RDBSchema:SQLNumeric" xmi:id="SQLNumeric_1234825601665" precision="8" scale="0">
+      <originatingType xmi:type="RDBSchema:SQLNumeric" href="DB2UDBAS400_V53_Primitives.xmi#SQLNumeric_1"/>
+    </type>
+  </columns>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="RSPCALLS" name="RSPCALLS">
+    <type xmi:type="RDBSchema:SQLNumeric" xmi:id="SQLNumeric_1234825601666" precision="3" scale="0">
+      <originatingType xmi:type="RDBSchema:SQLNumeric" href="DB2UDBAS400_V53_Primitives.xmi#SQLNumeric_1"/>
+    </type>
+  </columns>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="RSPTIMEF" name="RSPTIMEF">
+    <type xmi:type="RDBSchema:SQLNumeric" xmi:id="SQLNumeric_1234825601667" precision="6" scale="0">
+      <originatingType xmi:type="RDBSchema:SQLNumeric" href="DB2UDBAS400_V53_Primitives.xmi#SQLNumeric_1"/>
+    </type>
+  </columns>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="RSPTIMEL" name="RSPTIMEL">
+    <type xmi:type="RDBSchema:SQLNumeric" xmi:id="SQLNumeric_1234825601668" precision="6" scale="0">
+      <originatingType xmi:type="RDBSchema:SQLNumeric" href="DB2UDBAS400_V53_Primitives.xmi#SQLNumeric_1"/>
+    </type>
+  </columns>
+</RDBSchema:RDBTable>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RLogic:RLDBConnection xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:RLogic="RLogic.xmi" xmi:id="RLDBConnection_1234825601742" dbProductName="DB2 UDB for AS/400" dbProductVersion="05.03.0000 V5R3m0">
+  <rdbDb href="testvoice/dbase/pcscon_192.168.1.9.dbxmi#A92.168.1.9"/>
+  <filter xmi:id="RLFilter_1234825601742" name="SP" enabled="true">
+    <filterElement xmi:id="RLFilterElement_1234825601742" enabled="true" text=" Java SQL C OTHER" predicate="Language" operator="4"/>
+  </filter>
+</RLogic:RLDBConnection>

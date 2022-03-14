@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RDBSchema:RDBTable xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:RDBSchema="RDBSchema.xmi" xmi:id="TRSPF004" name="TRSPF004">
+  <database href="testvoice/dbase/pcscon_192.168.1.9.dbxmi#A92.168.1.9"/>
+  <schema href="testvoice/dbase/pcscon_192.168.1.9_TRSLIB.schxmi#TRSLIB"/>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="TRSMID" name="TRSMID" comments="ID">
+    <type xmi:type="RDBSchema:SQLNumeric" xmi:id="SQLNumeric_1234825601680" precision="3" scale="0">
+      <originatingType xmi:type="RDBSchema:SQLNumeric" href="DB2UDBAS400_V53_Primitives.xmi#SQLNumeric_1"/>
+    </type>
+  </columns>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="TRSMTX" name="TRSMTX" comments="TEXT">
+    <type xmi:type="RDBSchema:DB2AS400CharacterStringType" xmi:id="DB2AS400CharacterStringType_1234825601680" characterSet="800" length="70">
+      <originatingType xmi:type="RDBSchema:DB2AS400CharacterStringType" href="DB2UDBAS400_V53_Primitives.xmi#DB2AS400CharacterStringType_1"/>
+    </type>
+  </columns>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="TRSMOD" name="TRSMOD" comments="Order">
+    <type xmi:type="RDBSchema:SQLNumeric" xmi:id="SQLNumeric_1234825601681" precision="3" scale="0">
+      <originatingType xmi:type="RDBSchema:SQLNumeric" href="DB2UDBAS400_V53_Primitives.xmi#SQLNumeric_1"/>
+    </type>
+  </columns>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="TRSWAVF" name="TRSWAVF">
+    <type xmi:type="RDBSchema:DB2AS400CharacterStringType" xmi:id="DB2AS400CharacterStringType_1234825601681" characterSet="800" length="15">
+      <originatingType xmi:type="RDBSchema:DB2AS400CharacterStringType" href="DB2UDBAS400_V53_Primitives.xmi#DB2AS400CharacterStringType_1"/>
+    </type>
+  </columns>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="TRSFXMSG" name="TRSFXMSG">
+    <type xmi:type="RDBSchema:DB2AS400CharacterStringType" xmi:id="DB2AS400CharacterStringType_1234825601682" characterSet="800" length="1">
+      <originatingType xmi:type="RDBSchema:DB2AS400CharacterStringType" href="DB2UDBAS400_V53_Primitives.xmi#DB2AS400CharacterStringType_1"/>
+    </type>
+  </columns>
+</RDBSchema:RDBTable>

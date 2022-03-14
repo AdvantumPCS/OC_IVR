@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RDBSchema:RDBDatabase xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:RDBSchema="RDBSchema.xmi" xmi:id="A92.168.1.9" name="192.168.1.9">
+  <schemata href="testvoice/dbase/pcscon_192.168.1.9_TRSLIB.schxmi#TRSLIB"/>
+  <tableGroup xmi:type="RDBSchema:RDBTable" href="testvoice/dbase/pcscon_192.168.1.9_TRSLIB_QCLSRC.tblxmi#QCLSRC"/>
+  <tableGroup xmi:type="RDBSchema:RDBTable" href="testvoice/dbase/pcscon_192.168.1.9_TRSLIB_QDDSSRC.tblxmi#QDDSSRC"/>
+  <tableGroup xmi:type="RDBSchema:RDBTable" href="testvoice/dbase/pcscon_192.168.1.9_TRSLIB_QRPGLESRC.tblxmi#QRPGLESRC"/>
+  <tableGroup xmi:type="RDBSchema:RDBTable" href="testvoice/dbase/pcscon_192.168.1.9_TRSLIB_TRSADDCAT.tblxmi#TRSADDCAT"/>
+  <tableGroup xmi:type="RDBSchema:RDBTable" href="testvoice/dbase/pcscon_192.168.1.9_TRSLIB_TRSLOGINF.tblxmi#TRSLOGINF"/>
+  <tableGroup xmi:type="RDBSchema:RDBTable" href="testvoice/dbase/pcscon_192.168.1.9_TRSLIB_TRSPFT01.tblxmi#TRSPFT01"/>
+  <tableGroup xmi:type="RDBSchema:RDBTable" href="testvoice/dbase/pcscon_192.168.1.9_TRSLIB_TRSPF001.tblxmi#TRSPF001"/>
+  <tableGroup xmi:type="RDBSchema:RDBTable" href="testvoice/dbase/pcscon_192.168.1.9_TRSLIB_TRSPF002.tblxmi#TRSPF002"/>
+  <tableGroup xmi:type="RDBSchema:RDBTable" href="testvoice/dbase/pcscon_192.168.1.9_TRSLIB_TRSPF004.tblxmi#TRSPF004"/>
+  <tableGroup xmi:type="RDBSchema:RDBTable" href="testvoice/dbase/pcscon_192.168.1.9_TRSLIB_TRSPF005.tblxmi#TRSPF005"/>
+  <tableGroup xmi:type="RDBSchema:RDBTable" href="testvoice/dbase/pcscon_192.168.1.9_TRSLIB_TRSPF006.tblxmi#TRSPF006"/>
+  <tableGroup xmi:type="RDBSchema:RDBTable" href="testvoice/dbase/pcscon_192.168.1.9_TRSLIB_TRSPF010.tblxmi#TRSPF010"/>
+  <tableGroup xmi:type="RDBSchema:RDBTable" href="testvoice/dbase/pcscon_192.168.1.9_TRSLIB_TRSSTDNWK.tblxmi#TRSSTDNWK"/>
+  <tableGroup xmi:type="RDBSchema:RDBTable" href="testvoice/dbase/pcscon_192.168.1.9_TRSLIB_IVRCONFIG.tblxmi#IVRCONFIG"/>
+  <tableGroup xmi:type="RDBSchema:RDBTable" href="testvoice/dbase/pcscon_192.168.1.9_TRSLIB_TRSMSGLOG.tblxmi#TRSMSGLOG"/>
+  <tableGroup xmi:type="RDBSchema:RDBTable" href="testvoice/dbase/pcscon_192.168.1.9_TRSLIB_TRSSTDIN.tblxmi#TRSSTDIN"/>
+  <tableGroup xmi:type="RDBSchema:RDBTable" href="testvoice/dbase/pcscon_192.168.1.9_TRSLIB_TRSSTDOUT.tblxmi#TRSSTDOUT"/>
+  <connection href="testvoice/dbase/pcscon.conxmi#pcscon"/>
+  <domain href="DB2UDBAS400_V53_Domain.xmi#SQLVendor_1"/>
+  <rlCon href="testvoice/dbase/192.168.1.9_pcscon.rlconxmi#RLDBConnection_1234825601742"/>
+</RDBSchema:RDBDatabase>

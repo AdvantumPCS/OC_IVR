@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+
+<Query>
+<Schema>WebContent/testvoice/dbase/pcscon_192.168.1.9.dbxmi</Schema>
+
+<UpdateStatement>
+<![CDATA[
+
+UPDATE 
+   TRSLIB.TRSSTDOUT
+SET
+   RSPRQSD = 'Y'
+WHERE
+   TRSLIB.TRSSTDOUT.RSQID = 91 
+]]>
+</UpdateStatement>
+</Query>

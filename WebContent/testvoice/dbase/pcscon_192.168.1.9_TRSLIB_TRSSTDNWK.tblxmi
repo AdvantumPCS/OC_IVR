@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RDBSchema:RDBTable xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:RDBSchema="RDBSchema.xmi" xmi:id="TRSSTDNWK" name="TRSSTDNWK">
+  <database href="testvoice/dbase/pcscon_192.168.1.9.dbxmi#A92.168.1.9"/>
+  <schema href="testvoice/dbase/pcscon_192.168.1.9_TRSLIB.schxmi#TRSLIB"/>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="RSQID" name="RSQID" comments="Request ID">
+    <type xmi:type="RDBSchema:SQLNumeric" xmi:id="SQLNumeric_1234825601696" precision="15" scale="0">
+      <originatingType xmi:type="RDBSchema:SQLNumeric" href="DB2UDBAS400_V53_Primitives.xmi#SQLNumeric_1"/>
+    </type>
+  </columns>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="REQSEQ" name="REQSEQ" comments="Sequence">
+    <type xmi:type="RDBSchema:SQLNumeric" xmi:id="SQLNumeric_1234825601697" precision="3" scale="0">
+      <originatingType xmi:type="RDBSchema:SQLNumeric" href="DB2UDBAS400_V53_Primitives.xmi#SQLNumeric_1"/>
+    </type>
+  </columns>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="RSPNWKR" name="RSPNWKR" comments="Reason for no Work">
+    <type xmi:type="RDBSchema:DB2AS400CharacterStringType" xmi:id="DB2AS400CharacterStringType_1234825601696" characterSet="800" length="40">
+      <originatingType xmi:type="RDBSchema:DB2AS400CharacterStringType" href="DB2UDBAS400_V53_Primitives.xmi#DB2AS400CharacterStringType_1"/>
+    </type>
+  </columns>
+</RDBSchema:RDBTable>

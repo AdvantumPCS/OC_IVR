@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RDBSchema:RDBTable xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:RDBSchema="RDBSchema.xmi" xmi:id="TRSPF002" name="TRSPF002">
+  <database href="testvoice/dbase/pcscon_192.168.1.9.dbxmi#A92.168.1.9"/>
+  <schema href="testvoice/dbase/pcscon_192.168.1.9_TRSLIB.schxmi#TRSLIB"/>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="TRSGRP" name="TRSGRP" comments="Group">
+    <type xmi:type="RDBSchema:DB2AS400CharacterStringType" xmi:id="DB2AS400CharacterStringType_1234825601680" characterSet="800" length="1">
+      <originatingType xmi:type="RDBSchema:DB2AS400CharacterStringType" href="DB2UDBAS400_V53_Primitives.xmi#DB2AS400CharacterStringType_1"/>
+    </type>
+  </columns>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="TRSRPD" name="TRSRPD" comments="Period">
+    <type xmi:type="RDBSchema:DB2AS400CharacterStringType" xmi:id="DB2AS400CharacterStringType_1234825601681" characterSet="800" length="1">
+      <originatingType xmi:type="RDBSchema:DB2AS400CharacterStringType" href="DB2UDBAS400_V53_Primitives.xmi#DB2AS400CharacterStringType_1"/>
+    </type>
+  </columns>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="TRSSHFT" name="TRSSHFT" comments="Shift">
+    <type xmi:type="RDBSchema:DB2AS400CharacterStringType" xmi:id="DB2AS400CharacterStringType_1234825601682" characterSet="800" length="1">
+      <originatingType xmi:type="RDBSchema:DB2AS400CharacterStringType" href="DB2UDBAS400_V53_Primitives.xmi#DB2AS400CharacterStringType_1"/>
+    </type>
+  </columns>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="TRSDAY" name="TRSDAY" comments="Relevant Day">
+    <type xmi:type="RDBSchema:DB2AS400CharacterStringType" xmi:id="DB2AS400CharacterStringType_1234825601683" characterSet="800" length="1">
+      <originatingType xmi:type="RDBSchema:DB2AS400CharacterStringType" href="DB2UDBAS400_V53_Primitives.xmi#DB2AS400CharacterStringType_1"/>
+    </type>
+  </columns>
+</RDBSchema:RDBTable>

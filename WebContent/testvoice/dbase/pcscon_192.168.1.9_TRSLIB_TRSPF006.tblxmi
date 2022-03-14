@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RDBSchema:RDBTable xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:RDBSchema="RDBSchema.xmi" xmi:id="TRSPF006" name="TRSPF006">
+  <database href="testvoice/dbase/pcscon_192.168.1.9.dbxmi#A92.168.1.9"/>
+  <schema href="testvoice/dbase/pcscon_192.168.1.9_TRSLIB.schxmi#TRSLIB"/>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="TRSDID" name="TRSDID" comments="Distribution ID">
+    <type xmi:type="RDBSchema:DB2AS400CharacterStringType" xmi:id="DB2AS400CharacterStringType_1234825601680" characterSet="800" length="10">
+      <originatingType xmi:type="RDBSchema:DB2AS400CharacterStringType" href="DB2UDBAS400_V53_Primitives.xmi#DB2AS400CharacterStringType_1"/>
+    </type>
+  </columns>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="TRSDGP" name="TRSDGP" comments="Group">
+    <type xmi:type="RDBSchema:DB2AS400CharacterStringType" xmi:id="DB2AS400CharacterStringType_1234825601681" characterSet="800" length="1">
+      <originatingType xmi:type="RDBSchema:DB2AS400CharacterStringType" href="DB2UDBAS400_V53_Primitives.xmi#DB2AS400CharacterStringType_1"/>
+    </type>
+  </columns>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="TRSDMN" name="TRSDMN" comments="Man Number">
+    <type xmi:type="RDBSchema:SQLNumeric" xmi:id="SQLNumeric_1234825601680" precision="4" scale="0">
+      <originatingType xmi:type="RDBSchema:SQLNumeric" href="DB2UDBAS400_V53_Primitives.xmi#SQLNumeric_2"/>
+    </type>
+  </columns>
+</RDBSchema:RDBTable>

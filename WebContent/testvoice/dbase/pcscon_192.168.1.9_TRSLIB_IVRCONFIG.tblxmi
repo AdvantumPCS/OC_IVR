@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RDBSchema:RDBTable xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:RDBSchema="RDBSchema.xmi" xmi:id="IVRCONFIG" name="IVRCONFIG" primaryKey="C5706357">
+  <database href="testvoice/dbase/pcscon_192.168.1.9.dbxmi#A92.168.1.9"/>
+  <schema href="testvoice/dbase/pcscon_192.168.1.9_TRSLIB.schxmi#TRSLIB"/>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="RECORD_ID" name="RECORD_ID">
+    <type xmi:type="RDBSchema:SQLExactNumeric" xmi:id="SQLExactNumeric_1234825601696">
+      <originatingType xmi:type="RDBSchema:SQLExactNumeric" href="DB2UDBAS400_V53_Primitives.xmi#SQLExactNumeric_2"/>
+    </type>
+  </columns>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="CALL_SEQ" name="CALL_SEQ">
+    <type xmi:type="RDBSchema:SQLExactNumeric" xmi:id="SQLExactNumeric_1234825601697">
+      <originatingType xmi:type="RDBSchema:SQLExactNumeric" href="DB2UDBAS400_V53_Primitives.xmi#SQLExactNumeric_6"/>
+    </type>
+  </columns>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="TIMEOUT" name="TIMEOUT">
+    <type xmi:type="RDBSchema:SQLExactNumeric" xmi:id="SQLExactNumeric_1234825601698">
+      <originatingType xmi:type="RDBSchema:SQLExactNumeric" href="DB2UDBAS400_V53_Primitives.xmi#SQLExactNumeric_1"/>
+    </type>
+  </columns>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="RETRIES" name="RETRIES">
+    <type xmi:type="RDBSchema:SQLExactNumeric" xmi:id="SQLExactNumeric_1234825601699">
+      <originatingType xmi:type="RDBSchema:SQLExactNumeric" href="DB2UDBAS400_V53_Primitives.xmi#SQLExactNumeric_1"/>
+    </type>
+  </columns>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="MAX_MESSAGES" name="MAX_MESSAGES">
+    <type xmi:type="RDBSchema:SQLExactNumeric" xmi:id="SQLExactNumeric_1234825601700">
+      <originatingType xmi:type="RDBSchema:SQLExactNumeric" href="DB2UDBAS400_V53_Primitives.xmi#SQLExactNumeric_1"/>
+    </type>
+  </columns>
+  <namedGroup xmi:type="RDBSchema:SQLReference" xmi:id="C5706357" name="C5706357" members="RECORD_ID" constraint="SQLConstraint_1234825601696"/>
+  <constraints xmi:id="SQLConstraint_1234825601696" name="C5706357" type="PRIMARYKEY" primaryKey="C5706357"/>
+</RDBSchema:RDBTable>

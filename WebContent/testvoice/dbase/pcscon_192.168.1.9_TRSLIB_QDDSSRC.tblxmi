@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RDBSchema:RDBTable xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:RDBSchema="RDBSchema.xmi" xmi:id="QDDSSRC" name="QDDSSRC">
+  <database href="testvoice/dbase/pcscon_192.168.1.9.dbxmi#A92.168.1.9"/>
+  <schema href="testvoice/dbase/pcscon_192.168.1.9_TRSLIB.schxmi#TRSLIB"/>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="SRCSEQ" name="SRCSEQ">
+    <type xmi:type="RDBSchema:SQLNumeric" xmi:id="SQLNumeric_1234825601649" precision="6" scale="2">
+      <originatingType xmi:type="RDBSchema:SQLNumeric" href="DB2UDBAS400_V53_Primitives.xmi#SQLNumeric_2"/>
+    </type>
+  </columns>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="SRCDAT" name="SRCDAT">
+    <type xmi:type="RDBSchema:SQLNumeric" xmi:id="SQLNumeric_1234825601650" precision="6" scale="0">
+      <originatingType xmi:type="RDBSchema:SQLNumeric" href="DB2UDBAS400_V53_Primitives.xmi#SQLNumeric_2"/>
+    </type>
+  </columns>
+  <columns xmi:type="RDBSchema:RDBColumn" xmi:id="SRCDTA" name="SRCDTA">
+    <type xmi:type="RDBSchema:DB2AS400CharacterStringType" xmi:id="DB2AS400CharacterStringType_1234825601649" characterSet="800" length="80">
+      <originatingType xmi:type="RDBSchema:DB2AS400CharacterStringType" href="DB2UDBAS400_V53_Primitives.xmi#DB2AS400CharacterStringType_1"/>
+    </type>
+  </columns>
+</RDBSchema:RDBTable>

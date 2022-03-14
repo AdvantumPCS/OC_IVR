@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RDBSchema:RDBConnection xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:RDBSchema="RDBSchema.xmi" xmi:id="pcscon" name="pcscon" userid="pcs" password="encoded:AAADAwYHBgcICQoLHA0eLzAxUlNUFRYX" url="jdbc:as400:192.168.1.9;prompt=false" host="192.168.1.9" driver="com.ibm.as400.access.AS400JDBCDriver" otherDriver="com.ibm.as400.access.AS400JDBCDriver" classLocation="D:\sqllib\as400\jt400.jar" dbName="192.168.1.9" jdkHome="D:\Program Files\IBM\Rational\SDP\6.0\eclipse\jre" currentSchema="" packageOwner="" buildOwner="">
+  <database href="testvoice/dbase/pcscon_192.168.1.9.dbxmi#A92.168.1.9"/>
+  <filter xmi:id="RDBConnectionFilter_1234825601742" languageType="15">
+    <filterElement xmi:id="FilterElement_1234825601742" text="QSYS%" predicate="NOT_LIKE">
+      <targets xmi:id="FTarget_1234825601742" target="SCHEMA"/>
+    </filterElement>
+    <filterElement xmi:id="FilterElement_1234825601743" text="$%" predicate="NOT_LIKE">
+      <targets xmi:id="FTarget_1234825601743" target="SCHEMA"/>
+    </filterElement>
+    <filterElement xmi:id="FilterElement_1234825601744" text="#%" predicate="NOT_LIKE">
+      <targets xmi:id="FTarget_1234825601744" target="SCHEMA"/>
+    </filterElement>
+    <filterElement xmi:id="FilterElement_1234825601745" enabled="false" text="RCPGMLIB2">
+      <targets xmi:id="FTarget_1234825601745" target="SCHEMA"/>
+    </filterElement>
+    <filterElement xmi:id="FilterElement_1234825601746" text="TRSLIB">
+      <targets xmi:id="FTarget_1234825601746" target="SCHEMA"/>
+    </filterElement>
+    <filterElement xmi:id="FilterElement_1234825601747" text="SYS%" predicate="NOT_LIKE">
+      <targets xmi:id="FTarget_1234825601747"/>
+    </filterElement>
+  </filter>
+  <jdbcDriver href="DB2UDBAS400_V53_Domain.xmi#JDBCDriver_2"/>
+</RDBSchema:RDBConnection>
