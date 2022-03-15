@@ -1,0 +1,35 @@
+[
+  {
+    "message_type": 10,
+    "employee_number": 1221,
+    "work_date": 20220314,
+    "work_time": 14,
+    "wharf": "KW",
+    "berth": 5,
+    "ship": "Seaboard Sun",
+    "shift": 1,
+    "doubling": "n",
+    "phone_number": "358-3646",
+    "response_date": 20220314,
+    "response_time": 93412,
+    "days_off": []
+  },
+  {
+    "message_type": 7,
+    "employee_number": 1221,
+    "work_date": 20220315,
+    "work_time": 0,
+    "wharf": "",
+    "berth": 0,
+    "ship": "",
+    "shift": 0,
+    "doubling": "n",
+    "phone_number": "358-3646",
+    "response_date": 20220315,
+    "response_time": 93412,
+    "days_off": [
+      "Tuesday",
+      "Friday"
+    ]
+  }
+]
