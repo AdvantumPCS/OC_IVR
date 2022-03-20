@@ -137,7 +137,20 @@ public abstract class MessageBean
     }
     return false;
   }
-  
+  public  boolean isPlainTextMessage()
+  {
+    if (this.messageId == 99) {
+      return true;
+    }
+    return false;
+  }
+  public  boolean isErrorMessage()
+  {
+    if (this.messageId == -1) {
+      return true;
+    }
+    return false;
+  }
   public boolean isDayOffMessage()
   {
     return isDayOffMessage(this.messageId);

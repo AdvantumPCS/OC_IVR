@@ -86,7 +86,7 @@ catch (Exception e)
 	<form id="Welcome" >
 		<block>
  			<audio src="voices/Welcome5.wav">
-				Welcome to Oniel Charles Shipping Association's recruiting system.
+				Welcome to Shipping Association's recruiting system.
 			</audio>
 				<!--<submit method="get" next="pcsAuthen2.jsp" fetchtimeout="60s" />-->
 				<submit method="get" next="pcsAuthen4.jsp" fetchtimeout="60s" />

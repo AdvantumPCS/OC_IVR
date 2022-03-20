@@ -2,6 +2,7 @@ package pcs.recruit.access;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.io.OutputStream;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -23,7 +24,6 @@ public class ElabourBean {
  private String employeeNum;
  private String pin;
  private String token;
- private static HttpURLConnection conn;
  
  public ElabourBean(String usr,String pwd) {
 	 this.employeeNum=usr;
@@ -61,26 +61,29 @@ private MessageSetBean tryGetMessages(int maxMessages) {
 
 	try { 
 		System.out.println("About rest call");
-   	 JSONArray jobs=requstWorkRESTFul();  	
+   	 //JSONArray jobs=requstWorkRESTFul();
+		getAccessToken();
+		JSONArray jobs=this.getMessageFromElabour();
    	 for (int i = 0; i < jobs.length(); i++) {   		
-   			JSONObject job = jobs.getJSONObject(i);
-   			int messageType   =job.getInt("message_type");   			
-   			String ship       =job.getString("ship");
+   			JSONObject job     = jobs.getJSONObject(i);
+   			int messageType    =Integer.parseInt(job.getString("messageType"));   			
+   			String ship        =job.getString("ship");
    			System.out.println(ship+" in side for try get  "+jobs.length());
-   			int employeeNumber=job.getInt("employee_number");
-   			Long workDate     =job.getLong("work_date");
-   			int workTime      =job.getInt("work_time");
-   			String wharf      =job.getString("wharf");
-   			int berth         =job.getInt("berth");
-   			int shift         =job.getInt("shift");
-   			char doubling =job.getString("doubling").charAt(0);
-   			String phoneNumber=job.getString("phone_number");
-   			Long responseDate =job.getLong("response_date");
-   			int responseTime =job.getInt("response_time");
+   			int employeeNumber =0;//Integer.parseInt(job.getString("employeeNumber"));
+   			Long workDate      =0l;//job.getLong("workDate");
+   			int workTime       =0;//job.getInt("workTime");
+   			String wharf       =job.getString("wharf");
+   			int berth          =0;//Integer.parseInt(job.getString("berth"));
+   			int shift          =0;//Integer.parseInt(job.getString("shift"));
+   			char doubling      ='N';//job.getString("doubling").charAt(0);
+   			String phoneNumber =job.getString("phone");
+   			Long responseDate  =0l;//Long.parseLong(job.getString("responseDate"));
+   			int responseTime   =0;//Integer.parseInt(job.getString("responseTime"));
    			System.out.println(" Ship -"+ship); 			
    			List<String> dyo = new ArrayList<String>();
-			JSONArray daysOff = job.getJSONArray("days_off");
+			JSONArray daysOff = job.getJSONArray("dayOff");
 			String daysOffArr[] = new String[2];
+			String messageText=job.getString("messageText");
 			
 			for (int x = 0; x < daysOff.length(); x++) {
 				dyo.add(daysOff.getString(x));
@@ -88,7 +91,12 @@ private MessageSetBean tryGetMessages(int maxMessages) {
 			dyo.toArray(daysOffArr);
 			
 			MessageBean message = null;
-			if (MessageBean.isWorkMessage(messageType))
+			if(messageType==99 || messageType==-1) {
+				message = new PlainMessageBean(1l,1,1,
+                        messageType,employeeNumber,phoneNumber,DataConversion.parseWorkDate(responseDate), DataConversion.parseWorkTime(responseTime),messageText);
+                msgSet.addMessage(message);
+			}
+			else if (MessageBean.isWorkMessage(messageType))
             {
                 
                 message = new WorkMessageBean(1l,1,
@@ -106,7 +114,7 @@ private MessageSetBean tryGetMessages(int maxMessages) {
                 msgSet.addMessage(message);
             }
    		}
-    }catch(Exception e) {System.out.println("in side for tryget error  "+e.getMessage());}
+    }catch(Exception e) {System.out.println("in side for tryget error  "+e.getMessage()); e.printStackTrace();}
 	return msgSet;
 }
 
@@ -162,4 +170,70 @@ public void setPin(String pin) {
 	this.pin = pin;
 }
  
+public  void getAccessToken()  {
+	String token="";
+    try {
+      
+        StringBuilder data = new StringBuilder();        
+        data.append("grant_type=password&username=tester&password=test");
+        byte[] byteArray = data.toString().getBytes("UTF-8");
+        URL url = new URL("http://192.168.100.201:8080/oauth/token");
+        HttpURLConnection con = (HttpURLConnection)url.openConnection();
+        con.setRequestMethod("POST");
+        con.setConnectTimeout(5000);
+        con .setDoOutput(true);
+        con.setRequestProperty("Authorization",
+                "Basic YXBtMi1jbGllbnQ6MVowbS1yX3V4NkNZSzRZV203TQ==");
+        OutputStream postStream = con.getOutputStream();
+        postStream.write(byteArray, 0, byteArray.length);
+        postStream.close();
+
+        InputStreamReader reader = new InputStreamReader(con.getInputStream());
+        BufferedReader in = new BufferedReader(reader);
+        String json = in.readLine();
+        System.out.println("Json String = " + json);
+
+        JSONObject obj = new JSONObject(json.toString());
+        token=obj.getString("access_token");
+		System.out.println("token- " + token);
+			
+        in.close();
+        con.disconnect();
+   
+        
+    } catch(Exception e) {
+        e.printStackTrace();
+    }	
+    this.token= token; 
+}
+
+public  JSONArray getMessageFromElabour()  {
+	JSONArray jobs = new JSONArray();
+  try {	
+    URL url = new URL("http://192.168.100.201:8080/api/v1.0/requisition-scheduler/ivr-request-work?workerId="+this.employeeNum);
+    HttpURLConnection con = (HttpURLConnection)url.openConnection();
+    con.setRequestMethod("POST");
+    con.setConnectTimeout(5000);
+    con .setDoOutput(true);
+    con.setRequestProperty("Authorization", "Bearer "+this.token);
+    con.setRequestProperty("Content-Type","application/json");   
+    con.getOutputStream().write(this.pin.getBytes("UTF-8"));
+
+    int respCode=con.getResponseCode();
+    System.out.println("Response Code = " +respCode);
+
+    InputStreamReader reader = new InputStreamReader(con.getInputStream());
+    BufferedReader in = new BufferedReader(reader);
+    String json = in.readLine();
+    System.out.println("Json String = " + json);
+
+    jobs = new JSONArray(json);
+	
+	
+    in.close();
+    con.disconnect();
+  }catch(Exception e) { e.printStackTrace();}
+  return jobs;
+}
+
 }

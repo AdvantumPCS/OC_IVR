@@ -178,6 +178,36 @@
 <%		   
 			
 			}
+			else if (msg.isPlainTextMessage() )
+			{
+		    	PlainMessageBean pMsg = (PlainMessageBean)msg ;
+		    	rsb.addMessage(new PlayBean(pMsg,DoubleStates.UNKNOWN));
+				//dba.logMessageSet(rsb);		    	
+		    	
+		    	String txtFirst =pMsg.generateSMSText();
+		    	String txtSecond="";
+		    	String wavFirst = "";
+
+%>
+  				<form id="play<%= curMessage %>" >
+					<block>
+						<audio src="<%= wavFirst %>">
+							<%= txtFirst %>
+						</audio>
+						<prompt>
+							<%= txtSecond %>
+							<break time="1000"/>
+						</prompt>
+						
+						<var name="curMessage" expr="<%= curMessage %>" />
+						<assign name="curMessage" expr="curMessage + 1" />
+					    <submit method="get" next="playGoodSet.jsp" namelist="curMessage" fetchtimeout="60s" />
+					</block>
+				</form>
+				
+<%		   
+			
+			}
 			else /* is a recorded message bean */
 			{
 		    	RecordedMessageBean rec = (RecordedMessageBean)msg ;

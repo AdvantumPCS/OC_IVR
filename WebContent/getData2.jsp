@@ -43,13 +43,14 @@ try
 		String man3 = request.getParameter("glo_man3");
 		String man4 = request.getParameter("glo_man4");
 		int man = Integer.parseInt(man1 + man2 + man3 + man4);
-							
+		String manString=man1 + man2 + man3 + man4;					
 		// Pin Number
 		String pin1 = request.getParameter("glo_pin1");
 		String pin2 = request.getParameter("glo_pin2");
 		String pin3 = request.getParameter("glo_pin3");
 		String pin4 = request.getParameter("glo_pin4");
 		int pin = Integer.parseInt(pin1 + pin2 + pin3 + pin4);
+		String pinString=pin1 + pin2 + pin3 + pin4;
 
 		// ShannonB 03.Sep.2015 2:46pm - Check if Man # or Pin # evaluates to "0".
 		
@@ -75,9 +76,27 @@ try
 		else
 			{
 			System.out.println("Started get data 4");
-			 ElabourBean eBean = new ElabourBean(Integer.toString(man),Integer.toString(pin));
+			 ElabourBean eBean = new ElabourBean(manString,pinString);
 						 
 			 MessageSetBean msb2=eBean.retrieveMessages(1l,1,10,30,30);
+			 
+			 PlainMessageBean msg= (PlainMessageBean)(msb2.getMessages().get(0));
+			 if(msb2.getMessages().size()==1 && msg.isErrorMessage()){
+				 %>
+				 	<form id="invalidInput" >
+						<block>
+							<assign name="glo_state" expr="'getData2'" />
+							<assign name="glo_resultLoc" expr="'logon'"/>
+							<assign name="glo_result" expr="'userError'" />
+			  				<prompt>
+								<%=msg.generateSMSText() %>]
+							</prompt>
+							<log expr="'***** AppLog [Caller ID:' + session.callerid + '] [<%=currDate %>] - Login Not Attempted due credentials entered incorrectly (0000).'" />
+							<submit method="get" next="pcsAuthen4.jsp" fetchtimeout="60s" />
+						</block>
+					</form>
+					<%	
+			 }
 			/*
 		    AuthorizeBean auth = new AuthorizeBean(rpb.getCallSequence(),reqSeq,man,pin,"");
 		    session.setAttribute("ses_authorize",auth);
@@ -102,7 +121,7 @@ try
 					<assign name="glo_resultLoc" expr="'getMessages'"/>
 					<assign name="glo_result" expr="'ok'" />
 			<prompt>
-						got the data. Going to submit.
+					<!-- 	got the data. Going to submit. -->
 					</prompt>
 				
 					<submit method="get" next="playMsgs.jsp" fetchtimeout="60s" />
