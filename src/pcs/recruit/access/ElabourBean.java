@@ -3,7 +3,6 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
-import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.sql.Date;
@@ -13,6 +12,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+
+import javax.net.ssl.HttpsURLConnection;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -24,7 +25,14 @@ public class ElabourBean {
  private String employeeNum;
  private String pin;
  private String token;
+
+ private static final String BASE_URL = "";
+ private static final String BASE_URL_API = BASE_URL + "/api/v1.0/";
+ private static final String GRANT_PARAMS = "";
+ private static final String AUTH_CODE = "";
  
+
+
  public ElabourBean(String usr,String pwd) {
 	 this.employeeNum=usr;
 	 this.pin=pwd;
@@ -136,7 +144,7 @@ private MessageSetBean tryGetMessages2(int maxMessages) {
 public static JSONArray requstWorkRESTFul() throws Exception {
 	String url = "http://localhost/work/work_data.json";
 	URL obj = new URL(url);
-	HttpURLConnection con = (HttpURLConnection) obj.openConnection();
+	HttpsURLConnection con = (HttpsURLConnection) obj.openConnection();
 	con.setRequestMethod("GET");
 	con.setRequestProperty("User-Agent", "Mozilla/5.0");
 	int responseCode = con.getResponseCode();
@@ -175,15 +183,14 @@ public  void getAccessToken()  {
     try {
       
         StringBuilder data = new StringBuilder();        
-        data.append("grant_type=password&username=tester&password=test");
+        data.append(this.GRANT_PARAMS);
         byte[] byteArray = data.toString().getBytes("UTF-8");
-        URL url = new URL("http://192.168.100.201:8080/oauth/token");
-        HttpURLConnection con = (HttpURLConnection)url.openConnection();
+        URL url = new URL(this.BASE_URL + "oauth/token");
+        HttpsURLConnection con = (HttpsURLConnection)url.openConnection();
         con.setRequestMethod("POST");
         con.setConnectTimeout(5000);
         con .setDoOutput(true);
-        con.setRequestProperty("Authorization",
-                "Basic YXBtMi1jbGllbnQ6MVowbS1yX3V4NkNZSzRZV203TQ==");
+        con.setRequestProperty("Authorization", this.AUTH_CODE);
         OutputStream postStream = con.getOutputStream();
         postStream.write(byteArray, 0, byteArray.length);
         postStream.close();
@@ -210,8 +217,8 @@ public  void getAccessToken()  {
 public  JSONArray getMessageFromElabour()  {
 	JSONArray jobs = new JSONArray();
   try {	
-    URL url = new URL("http://192.168.100.201:8080/api/v1.0/requisition-scheduler/ivr-request-work?workerId="+this.employeeNum);
-    HttpURLConnection con = (HttpURLConnection)url.openConnection();
+    URL url = new URL(this.BASE_URL_API + "requisition-scheduler/ivr-request-work?workerId="+this.employeeNum);
+    HttpsURLConnection con = (HttpsURLConnection)url.openConnection();
     con.setRequestMethod("POST");
     con.setConnectTimeout(5000);
     con .setDoOutput(true);
